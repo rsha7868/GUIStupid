@@ -1,5 +1,7 @@
 package gui.view;
 import javax.swing.JPanel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import gui.controller.GUIAppController;
 import java.awt.Color;
 import javax.swing.JButton;
@@ -40,7 +42,14 @@ public class GUIPanel extends JPanel
 	}
 	private void setupListeners()
 	{
-		
+		firstButton.addActionListener(new ActionListener()
+			{
+			public void actionPerformed(ActionEvent click)
+				{
+				
+				}
+			
+			});
 	}
 	
 	
