@@ -23,6 +23,8 @@ public class GUIPanel extends JPanel
 		
 		setupPanel();
 		setupLayout();
+		setupListeners();
+		
 	}
 	/**
 	 * Used to add all the components to the screen and install a layout manager.
@@ -46,12 +48,20 @@ public class GUIPanel extends JPanel
 			{
 			public void actionPerformed(ActionEvent click)
 				{
-				
+					changeScreenColor();
 				}
 			
 			});
 	}
-	
+	private void changeScreenColor()
+	{
+		int red = (int) (Math.random() * 256);
+		int green = (int) (Math.random() * 256);
+		int blue = (int) (Math.random() * 256);
+		
+		this.setBackground(new Color(red, green, blue));
+		
+	}
 	
 	
 	
